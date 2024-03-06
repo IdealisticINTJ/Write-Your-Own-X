@@ -22,6 +22,9 @@ const (
 	TokenArrayEnd
 	TokenComma
 	TokenColon
+	TokenBeginArray
+	TokenEndArray
+	TokenValueSeparator
 )
 
 // Token represents a parsed token.
@@ -58,10 +61,10 @@ func (p *JSONParser) NextToken() Token {
 		return Token{Type: TokenObjectEnd, Value: "}"}
 	case ch == '[':
 		p.cursor++
-		return Token{Type: TokenArrayStart, Value: "["}
+		return Token{Type: TokenBeginArray, Value: "["}
 	case ch == ']':
 		p.cursor++
-		return Token{Type: TokenArrayEnd, Value: "]"}
+		return Token{Type: TokenEndArray, Value: "]"}
 	case ch == ',':
 		p.cursor++
 		return Token{Type: TokenComma, Value: ","}
@@ -148,8 +151,26 @@ func (p *JSONParser) parseNumber() Token {
 	return Token{Type: TokenNumber, Value: value}
 }
 
+// parseArray parses an array value.
+func (p *JSONParser) parseArray() Token {
+	p.cursor++ // Skip the opening bracket
+	start := p.cursor
+
+	for p.cursor < len(p.input) && p.input[p.cursor] != ']' {
+		p.cursor++
+	}
+
+	if p.cursor >= len(p.input) || p.input[p.cursor] != ']' {
+		return Token{Type: TokenError, Value: "Unterminated array"}
+	}
+
+	value := p.input[start:p.cursor]
+	p.cursor++ 
+	return Token{Type: TokenString, Value: value}
+}
+
 func main() {
-	input := `{}`
+	input := `{"key": [1, 2, 3]}`
 	parser := NewJSONParser(input)
 
 	firstToken := parser.NextToken()
@@ -166,8 +187,6 @@ func main() {
 			fmt.Println("Invalid JSON")
 			os.Exit(1)
 		}
-
-		lastToken = token
 	}
 
 	if firstToken.Type != TokenObjectStart || lastToken.Type != TokenObjectEnd {
