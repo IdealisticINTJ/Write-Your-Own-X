@@ -1,5 +1,13 @@
-### Late to the party (weekend build) but we roll. Implementing [https://codingchallenges.fyi/](https://codingchallenges.fyi/challenges/intro) in Go. 
+# John Crickett Coding Challenges
 
-- Building my own Unix's wc, with optimizations for performance and error handling.
+Late to the party (weekend build) but we roll. Implementing [codingchallenges.fyi](https://codingchallenges.fyi/challenges/intro) in Go.
 
-### Set-up
+## Challenges
+
+### Building My Own Unix's wc
+- Implemented a version of Unix's `wc` command in Go.
+- Optimized for performance and error handling.
+
+### JSON Parser with Array Support
+- Added functionality to a JSON parser to fully support JSON arrays.
+- Handled array elements and nested arrays.
