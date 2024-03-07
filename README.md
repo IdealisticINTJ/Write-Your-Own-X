@@ -2,7 +2,9 @@
 
 Late to the party (weekend build) but we roll. Implementing [codingchallenges.fyi](https://codingchallenges.fyi/challenges/intro) in Go.
 
-**Note: Doing this in addition to the day work to practice Go pretty much.**
+**Note: Doing this in addition to the day work to practice Go pretty much. Okay, maybe not. UNIX design principles are top-notch, so can learn a thing or two.**
+
+Read: [The Art of Unix Programming](http://www.catb.org/~esr/writings/taoup/html/)
 
 ## Challenges
 
@@ -13,3 +15,7 @@ Late to the party (weekend build) but we roll. Implementing [codingchallenges.fy
 ### JSON Parser with Array Support
 - Added functionality to a JSON parser to fully support JSON arrays.
 - Handled array elements and nested arrays.
+
+### Huffman Coding Compression Tool
+- Developed a CLI tool for lossless data compression using Priority Queue (Min Heap) and Depth-First Search (DFS) algorithms.
+- Implemented compression and decompression functions.
