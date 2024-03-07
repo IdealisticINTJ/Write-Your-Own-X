@@ -1,4 +1,4 @@
-# Coding Challenges
+# John Crickett Coding Challenges
 
 Late to the party (weekend build) but we roll. Implementing [codingchallenges.fyi](https://codingchallenges.fyi/challenges/intro) in Go.
 
