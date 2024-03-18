@@ -6,24 +6,24 @@ Late to the party (weekend build) but we roll. Implementing [codingchallenges.fy
 
 Read: [The Art of Unix Programming](http://www.catb.org/~esr/writings/taoup/html/)
 
-## Challenges
+---
 
-### Building My Own Unix's wc
+### 1. Building My Own Unix's wc
 - Implemented a version of Unix's `wc` command in Go.
 - Optimized for performance and error handling.
 
-### JSON Parser with Array Support
+### 2. JSON Parser with Array Support
 - Added functionality to a JSON parser to fully support JSON arrays.
 - Handled array elements and nested arrays.
 
-### Huffman Coding Compression Tool
+### 3. Huffman Coding Compression Tool
 - Developed a CLI tool for lossless data compression using Priority Queue (Min Heap) and Depth-First Search (DFS) algorithms.
 - Implemented compression and decompression functions.
 
-### CLI Cut Tool
+### 4. CLI Cut Tool
 - Implemented efficient field extraction using Go's string manipulation capabilities.
 - Utilized flag package to parse command-line arguments and provide flexible field selection options.
 
-### Load Balancer
+### 5. Load Balancer
 - Load balancer distributes requests using a round-robin algorithm to evenly distribute load among active servers.
 - Health check mechanism periodically checks the health status of backend servers and removes unhealthy servers from the pool to prevent service disruptions.
