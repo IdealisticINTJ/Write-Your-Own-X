@@ -19,3 +19,11 @@ Read: [The Art of Unix Programming](http://www.catb.org/~esr/writings/taoup/html
 ### Huffman Coding Compression Tool
 - Developed a CLI tool for lossless data compression using Priority Queue (Min Heap) and Depth-First Search (DFS) algorithms.
 - Implemented compression and decompression functions.
+
+### CLI Cut Tool
+- Implemented efficient field extraction using Go's string manipulation capabilities.
+- Utilized flag package to parse command-line arguments and provide flexible field selection options.
+
+### Load Balancer
+- Load balancer distributes requests using a round-robin algorithm to evenly distribute load among active servers.
+- Health check mechanism periodically checks the health status of backend servers and removes unhealthy servers from the pool to prevent service disruptions.
