@@ -1,4 +1,4 @@
-# John Crickett Coding Challenges
+# Challenge X - Write Your Own X
 
 Late to the party (weekend build) but we roll. Implementing [codingchallenges.fyi](https://codingchallenges.fyi/challenges/intro) in Go.
 
